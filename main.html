@@ -8,50 +8,54 @@
 
 <body>
 	<!-- the entire body must be written by student -->
-	<h1>Rock Paper Scissors</h1>
+    <h1 class="header">
+		Rock Paper Scissors
+	</h1>
 
-	<div class="gameContainer">
-		<!-- no. of turns as input -------------------------->
-		<h2>Number of Rounds</h2>
-		<input type="number" data-ns-test="game-number" id="game-number">
-		<br><br>
-		<!-- play Button  ----------------------------------->
-		<div class="play-button">
-			<button data-ns-test="play-game" id="play-game">PLAY</button>
-		</div><br>
-		<!-- user choice  ----------------------------------->
-		<div class="user-choice">
-			<h3>User Choice</h3>
-			<div id="userChoiceBtn">
-				<button class="userChoiceBtn" id="rock" data-ns-test="rock">rock</button>
-				<button class="userChoiceBtn" id="paper" data-ns-test="paper">paper</button>
-				<button class="userChoiceBtn" id="scissor" data-ns-test="scissor">scissor</button>
-				<p>User Choice: <span id="user-choice"></span></p>
-			</div>
+
+	<label for="game-number">Number of rounds:-</label>
+	<input type="number" name="game-number" id="game-number" data-ns-test="game-number" />
+	<button id="play-game" data-ns-test="play-game" onclick="playGame()">Play</button>
+
+
+	<div class="game-container" id="game-container">
+		<div>
+			<button data-ns-test="rock" id="rock" value="0">rock</button>
+			<button data-ns-test="paper" id="paper" value="1">paper</button>
+			<button data-ns-test="scissors" id="scissors" value="2">scissors</button>
 		</div>
-		<!-- computer choice  ------------------------------->
-		<div class="computerChoiceOutput" data-ns-test="computer-choose">
-			<p>Computer Choice: <span id="computer-choose"></span></p>
-		</div><br>
-		<!-- round result ----------------------------------->
-		<div class="roundResult" data-ns-test="round-result">
-			Round Winner is: <span id="roundResult"></span>
-		</div><br>
-
-		<div class="roundLeft" data-ns-test="round-left">
-			Rounds left: <span id="roundLeft"></span>
+		<div>
+			Computer choose :-
+			<span data-ns-test="computer-choose" id="computer-choose"></span>
 		</div>
 
-		<div class="gamePoints" data-ns-test="computer-points">
-			<h2>Game Points table</h2> <!--Won, Tie, Lose-->
-			<p>User: <span id="userPoints">0</span></p>
-			<p>Computer: <span id="compPoints">0</span></p>
-		</div>
-		<div class="winner" data-ns-test="game-result">
-			<h2>Game Winner is: <span id="game-result"></span></h2>
-		</div>
 
-    <script type="text/javascript" src="./script.js">
+		<span id="round-result" data-ns-test="round-result">
+			WON
+		</span>
+		<div>
+			User Points :-
+			<span data-ns-test="user-points" id="user-points">0</span>
+
+
+			Computer Points :-
+			<span data-ns-test="computer-points" id="computer-points">0</span>
+		</div>
+		<div>
+
+
+
+
+			Rounds Left :-
+			<span data-ns-test="rounds-left" id="rounds-left">0</span>
+		</div>
+	</div>
+
+
+	<div id="game-result" data-ns-test="game-result">
+		WON
+	</div>
+	<script type="text/javascript" src="./script.js">
 </script>
 
 </body>
